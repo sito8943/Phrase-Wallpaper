@@ -1,0 +1,69 @@
+{
+    "ES": {
+      "Notification": {
+        "NotConnected": "No tienes conexión con el servidor",
+        "Connected": "Se ha restablecido la conexión",
+        "CheckingConnection": "Verificando conexión"
+      },
+      "Login": {
+        "Title": "Phrase Wallpaper",
+        "Paragraph": "Un lugar donde en el cual las cosas comienzan a tener sentido",
+        "Buttons": {
+          "SignIn": "Inicia sesión",
+          "SignUp": "Registrarse",
+          "Forgot": "¿Has olvidado tu contraseña?"
+        },
+        "Labels": {
+          "User": "Usuario",
+          "Password": "Contraseña",
+          "Remember": "Recordar"
+        },
+        "Placeholders": {
+          "User": "Nombre de usuario",
+          "Password": "Contraseña"
+        }
+      },
+      "Main": {
+        "NavBar": {
+          "Placeholders": {
+            "Search": "Buscar..."
+          }
+        }
+      },
+      "NotMatch": {},
+      "Forgot": {
+        "Title": "¿Has olvidado la contraseña?",
+        "Paragraph": "Envía tu nombre de usuario o correo para reiniciar tu contraseña",
+        "Labels": {
+          "User": "Usuario"
+        },
+        "Buttons": {
+          "Send": "Enviar",
+          "Return": "Volver al Login"
+        },
+        "Placeholders": {
+          "User": "Nombre de usuario"
+        }
+      },
+      "SignUp": {
+        "Title": "Comienza tu viaje",
+        "Paragraph": "Únete la increible comunidad. Juegos, noticias, amigos y mucho más!",
+        "Buttons": {
+          "SignUp": "Registrarse",
+          "Return": "Volver al Login"
+        },
+        "Labels": {
+          "User": "Usuario",
+          "Email": "Email",
+          "Password": "Contraseña",
+          "PasswordR": "Repite la contraseña"
+        },
+        "Placeholders": {
+          "User": "Nombre de usuario",
+          "Email": "Email",
+          "Password": "Contraseña",
+          "PasswordR": "Repite la contraseña"
+        }
+      }
+    }
+  }

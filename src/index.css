@@ -1,0 +1,118 @@
+.uk-notification-message-danger {
+    color: aliceblue !important;
+    background-color: crimson !important;
+  }
+  
+  .uk-notification-message-warning {
+    color: aliceblue !important;
+    background-color: orange !important;
+  }
+  
+  .uk-button {
+    padding: 0 10px !important;
+  }
+  
+  .uk-offcanvas-bar {
+    background-color: dodgerblue !important;
+  }
+  
+  .uk-offcanvas-close {
+    border: none !important;
+    background: none !important;
+    color: white !important;
+  }
+  
+  body {
+    padding: 0 !important;
+  }
+  
+  .chat-icon {
+    margin: 0 5px;
+    font-size: 1.5rem !important;
+  }
+  
+  .icon {
+    color: #a09f9f;
+  }
+  
+  .icon:disabled {
+    color: #e5e5e5 !important;
+  }
+  
+  .icon-no-hover {
+    cursor: inherit;
+  }
+  
+  .icon-no-hover:hover {
+    color: #a09f9f !important;
+  }
+  
+  .icon-hover:hover {
+    color: dodgerblue !important;
+  }
+  
+  .menu-button {
+    border: none !important;
+    color: #a09f9f !important;
+  }
+  
+  .menu-button:hover {
+    color: dodgerblue !important;
+  }
+  
+  .online {
+    color: limegreen !important;
+  }
+  
+  .offline {
+    color: #a09f9f !important;
+  }
+  
+  .idle {
+    color: rgb(161, 135, 112) !important;
+  }
+  
+  .dont-disturb {
+    color: crimson !important;
+  }
+  
+  .state-icon {
+    margin: 0 5px 2px 0;
+  }
+  
+  .profile-img {
+    background-color: dodgerblue;
+    border-radius: 50%;
+  }
+  
+  .chat-list {
+    box-shadow: 2px 5px 5px 1px lightgrey;
+  }
+  
+  .chat-item {
+    margin-left: 10px;
+    padding: 10px 0;
+    text-decoration: none;
+  }
+  
+  .chat-item:hover {
+    text-decoration: none;
+  }
+  
+  .chat-description {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-left: 10px;
+  }
+  
+  .user-state-button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 0;
+  }
+  
+  .user-state-button:hover {
+    background: aliceblue;
+  }
