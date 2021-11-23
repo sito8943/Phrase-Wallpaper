@@ -50,14 +50,14 @@ const App = () => {
         </div>
       ) : (
         <Router>
-          <div style={{ display: "flex", flexDirection: "column" }}>
+          
             <Notification texts={ui.ES.Notification} />
             <Routes>
               <Route path="/" element={<Navbar texts={ui.ES.Navbar} />}>
                 <Route
                   index
                   element={
-                    contextState.user == "" ? (
+                    contextState.user.name == "" ? (
                       <Login texts={ui.ES.Login} />
                     ) : (
                       <Main texts={ui.ES.Main} />
@@ -75,7 +75,6 @@ const App = () => {
                 <Route path="*" elemet={<NotMatch texts={ui.ES.NotMatch} />} />
               </Route>
             </Routes>
-          </div>
         </Router>
       )}
     </>
