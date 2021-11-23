@@ -2,7 +2,9 @@ import React, { useState, useEffect } from "react";
 import { useContext } from "../../context/ContextProvider";
 import { SettingsIcon, XIcon } from "../../icons/icons";
 
-const NavBar = (props) => {
+import { Outlet, Link } from "react-router-dom";
+
+const Navbar = (props) => {
   const { contextState, setContextState } = useContext();
   const [search, setSearch] = useState("");
 
@@ -22,9 +24,9 @@ const NavBar = (props) => {
   return (
     <nav className="uk-navbar-container" data-uk-navbar>
       <div className="uk-navbar-left">
-        <a className="uk-navbar-item uk-logo" href="#">
+        <Link className="uk-navbar-item uk-logo" to="/">
           <img src="/logo192.png" alt="app-logo" style={{ height: "60px" }} />
-        </a>
+        </Link>
         <div className="uk-navbar-item ">
           <form action="javascript:void(0)">
             <input
@@ -42,26 +44,26 @@ const NavBar = (props) => {
       <div className="uk-navbar-right uk-visible@m">
         <ul className="uk-navbar-nav">
           <li className="uk-active">
-            <a href="#">Active</a>
+            <Link to="#">Active</Link>
           </li>
           <li>
             <a href="#">Parent</a>
             <div className="uk-navbar-dropdown">
               <ul className="uk-nav uk-navbar-dropdown-nav">
                 <li className="uk-active">
-                  <a href="#">Active</a>
+                  <Link to="#">Active</Link>
                 </li>
                 <li>
-                  <a href="#">Item</a>
+                  <Link to="#">Item</Link>
                 </li>
                 <li>
-                  <a href="#">Item</a>
+                  <Link to="#">Item</Link>
                 </li>
               </ul>
             </div>
           </li>
           <li>
-            <a href="#">Item</a>
+            <Link to="#">Item</Link>
           </li>
         </ul>
       </div>
@@ -92,8 +94,9 @@ const NavBar = (props) => {
           </div>
         </div>
       </div>
+      <Outlet />
     </nav>
   );
 };
 
-export default NavBar;
+export default Navbar;

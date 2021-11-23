@@ -3,14 +3,19 @@ import { useContext } from "./context/ContextProvider";
 
 import "uikit/dist/css/uikit.min.css";
 
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 import ui from "./lang/ui.json";
 
+import Loading from "./components/loading/Loading";
+import Navbar from "./components/navbar/Navbar";
 import Notification from "./components/notification/Notification";
 
-import Loading from "./components/loading/Loading";
 import Main from "./views/main/Main";
+import Login from "./views/login/Login";
+import Forgot from "./views/forgot/Forgot";
+import SignUp from "./views/signUp/SignUp";
 import NotMatch from "./views/notmatch/NotMatch";
 
 import { connectionState } from "./services/get";
@@ -33,22 +38,44 @@ const App = () => {
   return (
     <>
       {loading ? (
-        <Loading />
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            height: "100vh",
+          }}
+        >
+          <Loading />
+        </div>
       ) : (
         <Router>
-          <Notification texts={ui.ES.Notification} />
-          <Switch>
-            <Route exact path="/">
-              {contextState.user == "" ? (
-                <Login texts={ui.ES.Login} />
-              ) : (
-                <Main texts={ui.ES.Main} />
-              )}
-            </Route>
-            <Route>
-              <NotMatch texts={ui.ES.NotMatch} />
-            </Route>
-          </Switch>
+          <div style={{ display: "flex", flexDirection: "column" }}>
+            <Notification texts={ui.ES.Notification} />
+            <Routes>
+              <Route path="/" element={<Navbar texts={ui.ES.Navbar} />}>
+                <Route
+                  index
+                  element={
+                    contextState.user == "" ? (
+                      <Login texts={ui.ES.Login} />
+                    ) : (
+                      <Main texts={ui.ES.Main} />
+                    )
+                  }
+                />
+                <Route
+                  path="forgot"
+                  element={<Forgot texts={ui.ES.Forgot} />}
+                />
+                <Route
+                  path="signup"
+                  element={<SignUp texts={ui.ES.SignUp} />}
+                />
+                <Route path="*" elemet={<NotMatch texts={ui.ES.NotMatch} />} />
+              </Route>
+            </Routes>
+          </div>
         </Router>
       )}
     </>
